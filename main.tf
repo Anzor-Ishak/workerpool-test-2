@@ -25,8 +25,8 @@ module "my_workerpool" {
   min_size          = 1
   max_size          = 5
   worker_pool_id    = var.worker_pool_id
-  security_groups   = [aws_security_group.main.id]
-  vpc_subnets       = [aws_subnet.private.id, aws_subnet.public.id]
+  security_groups   = var.worker_pool_security_groups
+  vpc_subnets       = var.worker_pool_subnets
   ec2_instance_type = var.ec2_instance_type
 }
 
