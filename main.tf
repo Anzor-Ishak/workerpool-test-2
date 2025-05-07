@@ -26,7 +26,6 @@ module "my_workerpool" {
   max_size          = 5
   security_groups   = [aws_security_group.main.id]
   vpc_subnets       = [aws_subnet.private.id, aws_subnet.public.id]
-  vpc_subnets       = var.worker_pool_subnets
 }
 
 resource "random_string" "suffix" {
