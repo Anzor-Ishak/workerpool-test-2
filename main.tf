@@ -27,6 +27,7 @@ module "my_workerpool" {
   worker_pool_id    = var.worker_pool_id
   security_groups   = [aws_security_group.main.id]
   vpc_subnets       = [aws_subnet.private.id, aws_subnet.public.id]
+  ec2_instance_type = var.ec2_instance_type
 }
 
 resource "random_string" "suffix" {
