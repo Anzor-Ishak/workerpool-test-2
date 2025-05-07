@@ -27,9 +27,6 @@ module "my_workerpool" {
   worker_pool_id    = var.worker_pool_id
   security_groups   = [aws_security_group.main.id]
   vpc_subnets       = [aws_subnet.private.id, aws_subnet.public.id]
-  spacelift_api_key_secret = var.spacelift_api_key_secret
-  spacelift_api_key_endpoint = var.spacelift_api_key_endpoint
-  spacelift_api_key_id = var.spacelift_api_key_id
 }
 
 resource "random_string" "suffix" {
