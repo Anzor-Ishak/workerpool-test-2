@@ -25,8 +25,8 @@ module "my_workerpool" {
   min_size          = 1
   max_size          = 5
   worker_pool_id    = var.worker_pool_id
-  security_groups   = ["sg-0bb231b5ed5822d58", "sg-085003581f9e135df"]
-  vpc_subnets       = ["subnet-0845c2b4412243909", "subnet-08e6888f57144499f"]
+  security_groups   = ["sg-0bb231b5ed5822d58", "sg-085003581f9e135df"]
+  vpc_subnets       = ["subnet-0845c2b4412243909", "subnet-08e6888f57144499f"]
   ec2_instance_type = var.ec2_instance_type
 }
 
